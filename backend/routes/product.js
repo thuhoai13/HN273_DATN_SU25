@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
 
 // GET sản phẩm theo Id
 router.get('/:id', async (req, res) => {
-    const products = await Product.find();
+    const products = await Product.findById(req.params.id);
     res.json(products);
   });
   
